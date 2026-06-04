@@ -1,0 +1,142 @@
+/* src/components/Services/Services.module.css */
+
+.services {
+  padding-block: clamp(4rem, 10vw, 8rem);
+  background: var(--clr-off-white);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Decorative curved red line at top */
+.curveLine {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Heading */
+.headingBlock {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.titleHighlight {
+  background: var(--clr-accent-green);
+  padding: 0 0.12em;
+  border-radius: 5px;
+}
+
+.titleUnderline {
+  text-decoration: underline;
+  text-decoration-color: var(--clr-accent-yellow);
+  text-underline-offset: 6px;
+}
+
+/* Bordered card around heading */
+.headingBorder {
+  display: inline-block;
+  border: 2px solid var(--clr-accent-yellow);
+  padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+  border-radius: var(--r-sm);
+  margin-bottom: 2rem;
+}
+
+/* ---- Service list ---- */
+.list {
+  border-top: 1px solid var(--clr-border);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem) 0;
+  border-bottom: 1px solid var(--clr-border);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .item {
+    grid-template-columns: 1fr 2fr auto;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.item:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.itemClient {
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+  color: var(--clr-text-muted);
+  line-height: 1.4;
+  font-family: var(--font-mono);
+}
+
+.itemTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: color var(--transition-fast);
+}
+
+.item:hover .itemTitle {
+  color: var(--clr-accent-purple);
+}
+
+.itemArrow {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: center;
+  transition: background var(--transition-base),
+              border-color var(--transition-base),
+              transform var(--transition-base);
+  font-size: 1rem;
+  justify-self: end;
+}
+
+.item:hover .itemArrow {
+  background: var(--clr-black);
+  border-color: var(--clr-black);
+  color: var(--clr-white);
+  transform: rotate(45deg);
+}
+
+/* Expanded description */
+.itemDesc {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), opacity var(--transition-base);
+  opacity: 0;
+  grid-column: 1 / -1;
+}
+
+.item.expanded .itemDesc {
+  max-height: 100px;
+  opacity: 1;
+}

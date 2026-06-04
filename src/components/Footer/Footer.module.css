@@ -1,0 +1,93 @@
+/* src/components/Footer/Footer.module.css */
+
+.footer {
+  background: var(--clr-white);
+  border-top: 1px solid var(--clr-border);
+  padding-block: clamp(2.5rem, 6vw, 5rem) 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.col {}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--clr-black);
+}
+
+.colList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.colLink {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-block;
+}
+.colLink:hover {
+  color: var(--clr-black);
+}
+
+/* Contact column */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contactLine {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+.contactLink {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.contactLink:hover { color: var(--clr-black); }
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--clr-border);
+  margin-block: 2rem 1.5rem;
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-black);
+  text-decoration: none;
+}

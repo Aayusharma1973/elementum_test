@@ -1,0 +1,163 @@
+/* src/components/Testimonials/Testimonials.module.css */
+
+.testimonials {
+  padding-block: clamp(4rem, 10vw, 8rem);
+  background: var(--clr-white);
+  overflow: hidden;
+}
+
+/* ---- Section header ---- */
+.header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.headingUnderline {
+  text-decoration: underline;
+  text-decoration-color: var(--clr-accent-yellow);
+  text-underline-offset: 6px;
+}
+
+/* ---- Testimonial card outer ---- */
+.cardOuter {
+  border: 2px solid var(--clr-accent-yellow);
+  border-radius: var(--r-md);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+  overflow: visible;
+  background: var(--clr-white);
+}
+
+/* Floating avatars around the card */
+.floatAvatars {
+  position: relative;
+}
+
+.floatAvatar {
+  position: absolute;
+  width: clamp(40px, 6vw, 64px);
+  height: clamp(40px, 6vw, 64px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--clr-white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+.floatAvatar:hover { transform: scale(1.12); }
+
+.floatAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-tl  { top: -1.5rem; left: 1rem; }
+.avatar-ml  { top: 40%; left: -2rem; }
+.avatar-bl  { bottom: -1rem; left: 1.5rem; }
+.avatar-tr  { top: -1rem; right: 2rem; }
+.avatar-mr  { top: 30%; right: -2rem; }
+.avatar-br  { bottom: -1rem; right: 2rem; }
+.avatar-br2 { bottom: 2rem; right: -1rem; }
+
+/* Main testimonial content */
+.cardInner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media (max-width: 639px) {
+  .cardInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mainAvatar {
+  width: clamp(64px, 10vw, 100px);
+  height: clamp(64px, 10vw, 100px);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--clr-white);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+.mainAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nameTag {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-accent-yellow);
+  color: var(--clr-black);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.quoteBlock {}
+
+.openQuote {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 0.5;
+  color: var(--clr-accent-yellow);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.quoteText {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--clr-text-muted);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.closeQuote {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 0;
+  color: var(--clr-accent-yellow);
+  float: right;
+}
+
+/* Dots/controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clr-border);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  border: none;
+  padding: 0;
+}
+.dot.active {
+  background: var(--clr-black);
+  transform: scale(1.3);
+}
