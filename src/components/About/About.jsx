@@ -1,4 +1,3 @@
-// src/components/About/About.jsx
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './About.module.css';
 
@@ -9,9 +8,7 @@ export default function About() {
     <section id="about" className={styles.about} ref={ref}>
       <div className="container">
 
-        {/* Row 1 — Tomorrow should be better */}
         <div className={`${styles.row} reveal`}>
-          {/* Text */}
           <div className={styles.textSide}>
             <h2 className={styles.heading}>
               <em>Tomorrow</em> should<br />
@@ -28,7 +25,6 @@ export default function About() {
             </a>
           </div>
 
-          {/* Image */}
           <div className={styles.imageSide}>
             <div className={styles.blobBg} aria-hidden="true" />
             <div className={styles.imageCircleWrap}>
@@ -48,9 +44,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Row 2 — See how we can help you progress */}
         <div className={`${styles.row} ${styles.reversed} reveal reveal-delay-1`}>
-          {/* Image */}
           <div className={styles.imageSide}>
             <div className={styles.imageCircleWrap}>
               <div className={styles.imageCircle}>
@@ -68,7 +62,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Text */}
           <div className={styles.textSide}>
             <h2 className={styles.heading}>
               <em>See</em> how we can<br />

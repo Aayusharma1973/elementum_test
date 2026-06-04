@@ -1,4 +1,3 @@
-/* src/components/About/About.module.css */
 
 .about {
   padding-block: clamp(4rem, 10vw, 8rem);
@@ -6,7 +5,6 @@
   overflow: hidden;
 }
 
-/* ---- Row 1: Tomorrow should be better ---- */
 .row {
   display: grid;
   grid-template-columns: 1fr;
@@ -29,7 +27,6 @@
   }
 }
 
-/* ---- Text side ---- */
 .textSide {}
 
 .heading {
@@ -83,7 +80,6 @@
   display: inline-block;
 }
 
-/* ---- Image side ---- */
 .imageSide {
   position: relative;
 }
@@ -112,7 +108,6 @@
   transform: scale(1.06);
 }
 
-/* Decorative red triangle */
 .decorTriangle {
   position: absolute;
   bottom: -1.5rem;
@@ -124,7 +119,6 @@
   z-index: 1;
 }
 
-/* Decorative square overlay */
 .decorSquare {
   position: absolute;
   top: -1rem;
@@ -136,7 +130,6 @@
   border-radius: 4px;
 }
 
-/* Name tag over image */
 .imageNameTag {
   position: absolute;
   bottom: 1.5rem;
@@ -152,7 +145,6 @@
   z-index: 4;
 }
 
-/* Red blob / background radial */
 .blobBg {
   position: absolute;
   top: -3rem;
@@ -164,7 +156,6 @@
   z-index: 0;
 }
 
-/* Curved red line SVG */
 .curvedLine {
   position: absolute;
   right: 0;

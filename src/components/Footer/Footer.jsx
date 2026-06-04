@@ -1,4 +1,4 @@
-// src/components/Footer/Footer.jsx
+
 import { FOOTER_LINKS } from '../../data/siteData';
 import styles from './Footer.module.css';
 
@@ -11,7 +11,6 @@ export default function Footer() {
       <div className="container">
         <div className={styles.grid}>
 
-          {/* Company */}
           <div className={styles.col}>
             <p className={styles.colTitle}>Company</p>
             <ul className={styles.colList} role="list">
@@ -23,7 +22,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Terms & Policies */}
           <div className={styles.col}>
             <p className={styles.colTitle}>Terms &amp; Policies</p>
             <ul className={styles.colList} role="list">
@@ -35,7 +33,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Follow Us */}
           <div className={styles.col}>
             <p className={styles.colTitle}>Follow Us</p>
             <ul className={styles.colList} role="list">
@@ -55,7 +52,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className={styles.col}>
             <p className={styles.colTitle}>Terms &amp; Policies</p>
             <address className={`${styles.contact}`} style={{ fontStyle: 'normal' }}>

@@ -1,4 +1,3 @@
-// src/components/Hero/Hero.jsx
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { TEAM_MEMBERS } from '../../data/siteData';
 import styles from './Hero.module.css';
@@ -14,7 +13,6 @@ export default function Hero() {
 
       <div className="container">
         <div className={styles.inner}>
-          {/* Red-bordered headline card */}
           <div className={`${styles.headlineWrap} reveal`}>
             <h1 className={styles.headline}>
               <span className={styles['hl-plain']}>The </span>
@@ -29,14 +27,12 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Subtitle */}
           <p className={`${styles.subtitle} reveal reveal-delay-1`}>
             We are a team of strategists, designers, communicators, researchers.
             Together, we believe that progress only happens when you refuse to play
             things safe.
           </p>
 
-          {/* Team member images */}
           <div
             className={`${styles.teamRow} reveal reveal-delay-2`}
             role="list"

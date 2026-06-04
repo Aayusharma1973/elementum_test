@@ -1,4 +1,3 @@
-// src/data/siteData.js
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },

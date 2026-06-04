@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.jsx
 import { useState } from 'react';
 import { useNavScroll } from '../../hooks/useNavScroll';
 import { NAV_LINKS } from '../../data/siteData';
@@ -19,12 +18,10 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         <div className={`container ${styles.inner}`}>
-          {/* Logo */}
           <a href="#home" className={styles.logo} onClick={closeMenu}>
             Elementum
           </a>
 
-          {/* Desktop links */}
           <ul className={styles.links} role="list">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={label}>
@@ -35,14 +32,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA */}
           <div className={styles.ctaWrap}>
             <a href="#contact" className={styles.ctaBtn}>
               Contact us
             </a>
           </div>
 
-          {/* Hamburger */}
           <button
             className={[styles.burger, open ? styles.open : ''].join(' ')}
             onClick={toggleMenu}
@@ -56,7 +51,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer */}
       <div
         className={[styles.drawer, open ? styles.open : ''].join(' ')}
         aria-hidden={!open}

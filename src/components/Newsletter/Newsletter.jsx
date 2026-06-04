@@ -1,4 +1,3 @@
-// src/components/Newsletter/Newsletter.jsx
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Newsletter.module.css';
 
@@ -6,13 +5,11 @@ export default function Newsletter() {
   const ref = useScrollReveal();
 
   const handleSubscribe = () => {
-    // In a real app this would open a modal or link to a form
     alert('Thanks! We\'ll be in touch.');
   };
 
   return (
     <section id="contact" className={styles.newsletter} ref={ref}>
-      {/* Decorative */}
       <div className={styles.frameSketch} aria-hidden="true" />
       <div className={styles.blobPurple} aria-hidden="true" />
 

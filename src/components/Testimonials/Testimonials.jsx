@@ -1,4 +1,3 @@
-// src/components/Testimonials/Testimonials.jsx
 import { useState } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { TESTIMONIALS, TEAM_MEMBERS } from '../../data/siteData';
@@ -19,7 +18,6 @@ export default function Testimonials() {
     <section id="testimonials" className={styles.testimonials} ref={ref}>
       <div className="container">
 
-        {/* Header */}
         <div className={`${styles.header} reveal`}>
           <h2 className={styles.heading}>
             What our customer<br />
@@ -28,9 +26,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Card with floating avatars */}
         <div className={`${styles.floatAvatars} reveal reveal-delay-1`}>
-          {/* Floating side avatars */}
           {SIDE_AVATARS.map((m, i) => (
             <div
               key={m.id}
@@ -47,10 +43,8 @@ export default function Testimonials() {
             </div>
           ))}
 
-          {/* Main card */}
           <div className={styles.cardOuter} role="region" aria-label="Customer testimonial">
             <div className={styles.cardInner}>
-              {/* Main avatar */}
               <div className={styles.mainAvatar}>
                 <img
                   src={current.image}
@@ -63,7 +57,6 @@ export default function Testimonials() {
                 <span className={styles.nameTag}>{current.name.split(' ')[0]}</span>
               </div>
 
-              {/* Quote */}
               <div className={styles.quoteBlock}>
                 <span className={styles.openQuote} aria-hidden="true">"</span>
                 <p className={styles.quoteText}>{current.quote}</p>
@@ -73,7 +66,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Dot controls */}
         <div
           className={styles.controls}
           role="tablist"

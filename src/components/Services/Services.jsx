@@ -1,4 +1,3 @@
-// src/components/Services/Services.jsx
 import { useState } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { SERVICES } from '../../data/siteData';
@@ -12,7 +11,6 @@ export default function Services() {
 
   return (
     <section id="services" className={styles.services} ref={ref}>
-      {/* Decorative curved line */}
       <svg
         className={styles.curveLine}
         viewBox="0 0 1440 80"
@@ -30,7 +28,6 @@ export default function Services() {
       </svg>
 
       <div className="container">
-        {/* Heading */}
         <div className={`${styles.headingBlock} reveal`}>
           <div className={styles.headingBorder}>
             <h2 className={styles.title}>
@@ -42,7 +39,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Service list */}
         <ul
           className={`${styles.list} reveal reveal-delay-1`}
           role="list"

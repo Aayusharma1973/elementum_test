@@ -1,5 +1,3 @@
-/* src/components/Navbar/Navbar.module.css */
-
 .nav {
   position: fixed;
   top: 0;
@@ -28,7 +26,6 @@
   gap: 1.5rem;
 }
 
-/* Logo */
 .logo {
   font-family: var(--font-display);
   font-size: 1.35rem;
@@ -41,7 +38,6 @@
 }
 .logo:hover { opacity: 0.75; }
 
-/* Desktop nav links */
 .links {
   display: none;
   align-items: center;
@@ -67,7 +63,6 @@
   background: rgba(0,0,0,0.05);
 }
 
-/* CTA */
 .ctaWrap {
   display: none;
 }
@@ -91,7 +86,6 @@
   transform: translateY(-2px);
 }
 
-/* Hamburger */
 .burger {
   display: flex;
   flex-direction: column;
@@ -127,7 +121,6 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile drawer */
 .drawer {
   position: fixed;
   top: 0;

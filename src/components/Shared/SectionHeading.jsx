@@ -1,18 +1,6 @@
-// src/components/Shared/SectionHeading.jsx
 import styles from './SectionHeading.module.css';
 
-/**
- * Reusable section heading with optional highlight word(s)
- * and a subtitle.
- *
- * Usage:
- *   <SectionHeading
- *     highlight="can"
- *     title="What we {can} offer you!"
- *     subtitle="Optional subtitle text"
- *     align="left" | "center"
- *   />
- */
+
 export default function SectionHeading({
   title,
   subtitle,

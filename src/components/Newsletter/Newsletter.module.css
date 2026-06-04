@@ -1,4 +1,3 @@
-/* src/components/Newsletter/Newsletter.module.css */
 
 .newsletter {
   padding-block: clamp(4rem, 10vw, 7rem);
@@ -8,7 +7,6 @@
   text-align: center;
 }
 
-/* Decorative purple blob */
 .blobPurple {
   position: absolute;
   bottom: 2rem;
@@ -21,7 +19,6 @@
   pointer-events: none;
 }
 
-/* Small framed sketch top-left */
 .frameSketch {
   position: absolute;
   top: 2.5rem;

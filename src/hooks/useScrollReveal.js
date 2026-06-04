@@ -1,4 +1,3 @@
-// src/hooks/useScrollReveal.js
 import { useEffect, useRef } from 'react';
 
 export function useScrollReveal(options = {}) {
@@ -20,7 +19,6 @@ export function useScrollReveal(options = {}) {
       { threshold: 0.15, rootMargin: '0px 0px -40px 0px', ...options }
     );
 
-    // Observe the element itself and all .reveal children
     const targets = el.querySelectorAll('.reveal');
     if (targets.length) {
       targets.forEach((t) => observer.observe(t));
